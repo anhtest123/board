@@ -20,6 +20,7 @@ $('#login_submit').click(function()
                                     $('.login100-form').css('display','none');
                                     $('.login-OK-form').css('display','block');
                                     document.querySelector('.login100-OK-title').innerHTML = data.guide_text;
+                                    document.querySelector('#modal_body').innerHTML = "";
                                 }
                                 else
                                 {
