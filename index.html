@@ -34,13 +34,18 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
+				<div class="login-OK-form" style="display: none;">
+					<span class="login100-OK-title">
+						...
+					</span>
+				</div>
 				<div class="login100-form validate-form">
 					<span class="login100-form-title">
 						Member Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input id="ID" class="input100" type="text" name="email" placeholder="Email">
+					<div class="wrap-input100 validate-input" data-validate = "ID is required">
+						<input id="ID" class="input100" type="text" name="ID" placeholder="ID">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -56,7 +61,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button id="login_submit" class="login100-form-btn" data-toggle="modal" data-target="#exampleModalCenter">
+						<button id="login_submit" class="login100-form-btn">
 							Login
 						</button>
 					</div>
@@ -81,13 +86,13 @@
 		</div>
 	</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<!-- Modal -->		
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<button type="button" class="modal-close">
 				<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
@@ -95,7 +100,7 @@
 				...	
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-secondary modal-close">Close</button>
 			</div>
 			</div>
 		</div>

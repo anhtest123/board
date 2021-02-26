@@ -177,6 +177,7 @@ iframe {
 
 .wrap-login100 {
   width: 960px;
+  height: 678px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -204,11 +205,11 @@ iframe {
 
 /*------------------------------------------------------------------
 [  ]*/
-.login100-form {
+.login100-form, .login-OK-form {
   width: 290px;
 }
 
-.login100-form-title {
+.login100-form-title, .login100-OK-title {
   font-family: Poppins-Bold;
   font-size: 24px;
   color: #333333;
@@ -218,6 +219,10 @@ iframe {
   width: 100%;
   display: block;
   padding-bottom: 54px;
+}
+
+.login100-OK-title {
+  margin-top: 150px;
 }
 
 
@@ -368,7 +373,7 @@ iframe {
     width: 35%;
   }
 
-  .login100-form {
+  .login100-form, .login-OK-form{
     width: 50%;
   }
 }
@@ -382,7 +387,7 @@ iframe {
     display: none;
   }
 
-  .login100-form {
+  .login100-form, .login-OK-form {
     width: 100%;
   }
 }
