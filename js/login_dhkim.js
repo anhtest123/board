@@ -9,7 +9,7 @@ $('#login_submit').click(function()
                 console.log(form_data);
                 $.ajax({
                         type: "POST",
-                        url: "./b.php",
+                        url: "./login.php",
                         dataType: "json",
                         data : form_data,
                         success: 
