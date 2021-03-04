@@ -12,7 +12,7 @@
     $row = mysqli_fetch_array($result);
 
     // PW 확인
-    $row == NULL ? $passwordResult = false : $passwordResult = password_verify($_POST['password'], $row['pw']);;
+    $row == NULL ? $passwordResult = false : $passwordResult = password_verify($_POST['password'], $row['pw']);
 
     if($passwordResult)
     {
@@ -20,7 +20,7 @@
     }
     else
     {
-        $json = json_encode(array('validation_result' => 'Faill', 'guide_text' => '아이디 또는 비밀번호가 옳바르지 않습니다.'));    
+        $json = json_encode(array('validation_result' => 'Login Fail', 'guide_text' => '아이디 또는 비밀번호가 옳바르지 않습니다.'));    
     }
 
     echo $json;

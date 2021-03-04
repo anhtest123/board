@@ -1,0 +1,15 @@
+.comment {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    padding: 0px 0px 10px 20px;
+
+}
+#sginup_form {
+    overflow:auto;
+    height: 518px;
+}
+
+#sginup_form::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
