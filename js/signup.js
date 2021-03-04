@@ -1,9 +1,12 @@
     $(document).ready(function(){
         $('.wrap-login100').css('padding-top','127px');
         $('.login100-pic').css('margin-top','50px');
+    
     });
+    var keystatus = false;
 
-    $('#signup_submit').click(function(){       
+    $('#signup_submit').click(function(){      
+        var keystatus = false;
         if('rgb(87, 184, 70)' != $('#signup_ID').css('color')) { $('#signup_ID').focus(); }
         else if('rgb(87, 184, 70)' != $('#signup_password').css('color')) { $('#signup_password').focus(); }
         else if('rgb(87, 184, 70)' != $('#passwordcheck').css('color')) { $('#passwordcheck').focus(); }
@@ -31,6 +34,13 @@
             document.querySelector('#exampleModalLongTitle').innerHTML = 'OK';
             $('#myModal').modal('show');
         }
+    });
+
+    $('.input100').keydown(function(key) {
+        if (key.keyCode == 13) {
+            $('.input100').blur();
+            keystatus = true;
+        }   
     });
 
     // 입력 가이드 
@@ -64,6 +74,7 @@
                         {
                             $('#signup_ID').css('color','#57b846');
                             $('#signup_ID_comment').css('display','none'); 
+                            if(keystatus) $('#signup_submit').click();
                         }
                         else
                         {
@@ -144,6 +155,7 @@
                         {
                             $('#nickname').css('color','#57b846');
                             $('#signup_nickname_comment').css('display','none');
+                            if(keystatus) $('#signup_submit').click();
                         }
                         else
                         {
@@ -155,12 +167,6 @@
                 });
         }
     });
-
-    $("#signup_submit").keydown(function(key) {
-        if (key.keyCode == 13) {
-            $("#login_submit").click();
-        }
-    })
 
     $('.modal-close, .show').click(function(){
         $('#myModal').modal('hide');
